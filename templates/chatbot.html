@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChatBOT</title>
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+    <body>
+        
+        <p><strong>You:</strong>{{ user_input}}</p>
+        <p><strong>Chatbot:</strong>{{ bot_response}}</p>
+
+        <div class="chat-container ">
+            <form method="post" action="{{url_for('chatbot')}}">
+                <label for="message">Message:</label>
+                
+                <input type="text" class="user-message" id="message" name="message" placeholder="Type your message..." required>
+                <button onclick="sendMessage()">click here</button>
+
+                
+            </form>
+        </div>
+
+        </body>
+</html>
